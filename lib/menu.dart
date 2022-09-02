@@ -33,7 +33,27 @@ class _MenuState extends State<Menu> {
             width: double.infinity,
             child: Stack(
               children: [
-                Positioned(
+                Row(
+                  children: [Image.network(foodList[index][0])],
+                  //fit: BoxFit.cover,
+                ),
+                Expanded(
+                  child: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                    child: Column(
+                      children: [
+                        Text(
+                          "${foodList[index][1]}",
+                          style: TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                )
+                /*Positioned(
                   bottom: 0,
                   child: Container(
                     color: Colors.blue,
@@ -49,7 +69,7 @@ class _MenuState extends State<Menu> {
                     width: 30,
                     height: 30,
                   ),
-                ),
+                ),*/
               ],
             ),
           ),
