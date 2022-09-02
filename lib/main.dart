@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         home: Scaffold(
           appBar: AppBar(
+            title: Text("Food Menu"),
             backgroundColor: Colors.red,
           ),
           body: Menu(),

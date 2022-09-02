@@ -31,6 +31,27 @@ class _MenuState extends State<Menu> {
           child: Container(
             height: 100,
             width: double.infinity,
+            child: Stack(
+              children: [
+                Positioned(
+                  bottom: 0,
+                  child: Container(
+                    color: Colors.blue,
+                    width: 50,
+                    height: 50,
+                  ),
+                ),
+                Positioned(
+                  top: 0,
+                  right: 0,
+                  child: Container(
+                    color: Colors.red,
+                    width: 30,
+                    height: 30,
+                  ),
+                ),
+              ],
+            ),
           ),
         );
       },
