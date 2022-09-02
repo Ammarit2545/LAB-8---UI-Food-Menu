@@ -25,7 +25,14 @@ class _MenuState extends State<Menu> {
     return ListView.builder(
       itemCount: foodList.length,
       itemBuilder: (_, index) {
-        return Text("${foodList[index][1]}");
+        return Card(
+          elevation: 0,
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.zero),
+          child: Container(
+            height: 100,
+            width: double.infinity,
+          ),
+        );
       },
     );
   }
