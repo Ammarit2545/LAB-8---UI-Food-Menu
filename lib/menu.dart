@@ -15,9 +15,18 @@ class _MenuState extends State<Menu> {
       "https://image.shutterstock.com/image-illustration/gold-no1-emblem-260nw-340330580.jpg",
       280
     ],
-    ["https://i.ytimg.com/vi/1oBv9S8QV8k/maxresdefault.jpg", 300],
-    ["https://i.ytimg.com/vi/hN4EFQkgnAo/maxresdefault.jpg", 230],
-    ["https://i.ytimg.com/vi/1oBv9S8QV8k/maxresdefault.jpg", 290],
+    [
+      "https://image.shutterstock.com/image-illustration/gold-no1-emblem-260nw-340330580.jpg",
+      300
+    ],
+    [
+      "https://image.shutterstock.com/image-illustration/gold-no1-emblem-260nw-340330580.jpg",
+      230
+    ],
+    [
+      "https://image.shutterstock.com/image-illustration/gold-no1-emblem-260nw-340330580.jpg",
+      290
+    ],
   ];
 
   @override
@@ -34,25 +43,54 @@ class _MenuState extends State<Menu> {
             child: Stack(
               children: [
                 Row(
-                  children: [Image.network(foodList[index][0])],
+                  children: [
+                    Image.network(foodList[index][0]),
+                    Expanded(
+                      child: Container(
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "${foodList[index][0]}",
+                              style: TextStyle(
+                                fontSize: 15,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 5,
+                            ),
+                            Text(
+                              " ${foodList[index][1]} B",
+                              style: TextStyle(
+                                color: Colors.green,
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
                   //fit: BoxFit.cover,
                 ),
-                Expanded(
-                  child: Container(
-                    padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-                    child: Column(
-                      children: [
-                        Text(
-                          "${foodList[index][1]}",
-                          style: TextStyle(
-                            fontSize: 15,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        )
-                      ],
+                Container(
+                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                  alignment: Alignment.bottomRight,
+                  child: Chip(
+                    backgroundColor: Colors.orangeAccent,
+                    label: Text(
+                      "Order Now",
+                      style: TextStyle(
+                        fontSize: 11,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
-                )
+                ),
                 /*Positioned(
                   bottom: 0,
                   child: Container(
