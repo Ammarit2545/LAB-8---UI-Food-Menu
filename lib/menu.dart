@@ -12,19 +12,23 @@ class Menu extends StatefulWidget {
 class _MenuState extends State<Menu> {
   List<List<dynamic>> foodList = [
     [
-      "https://image.shutterstock.com/image-illustration/gold-no1-emblem-260nw-340330580.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/RedDot_Burger.jpg/1200px-RedDot_Burger.jpg",
+      "Southwest Turkey Burker With Wango-Chili Guacamole",
       280
     ],
     [
-      "https://image.shutterstock.com/image-illustration/gold-no1-emblem-260nw-340330580.jpg",
+      "https://media.istockphoto.com/photos/key-lime-pie-picture-id176753451?k=20&m=176753451&s=612x612&w=0&h=UD949OL3t6Ky_OjlWQct9YAl-LnTrF5fN83ZpmoXwHE=",
+      "Key lime pie",
       300
     ],
     [
-      "https://image.shutterstock.com/image-illustration/gold-no1-emblem-260nw-340330580.jpg",
+      "https://media.istockphoto.com/photos/organic-fried-tater-tots-picture-id454241067?k=20&m=454241067&s=612x612&w=0&h=Camnb1gjh9lfzt_KIbXKyiP4_c4Bo7qhquktCCyi59s=",
+      "Tater tots",
       230
     ],
     [
-      "https://image.shutterstock.com/image-illustration/gold-no1-emblem-260nw-340330580.jpg",
+      "https://m.media-amazon.com/images/I/81Nb+-kTEpL._SL1240_.jpg",
+      "San Francisco sourdough bread",
       290
     ],
   ];
@@ -53,7 +57,7 @@ class _MenuState extends State<Menu> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              "${foodList[index][0]}",
+                              "${foodList[index][1]}",
                               style: TextStyle(
                                 fontSize: 15,
                                 fontWeight: FontWeight.bold,
@@ -63,7 +67,7 @@ class _MenuState extends State<Menu> {
                               height: 5,
                             ),
                             Text(
-                              " ${foodList[index][1]} B",
+                              " ${foodList[index][2]} B",
                               style: TextStyle(
                                 color: Colors.green,
                                 fontSize: 14,
@@ -91,23 +95,6 @@ class _MenuState extends State<Menu> {
                     ),
                   ),
                 ),
-                /*Positioned(
-                  bottom: 0,
-                  child: Container(
-                    color: Colors.blue,
-                    width: 50,
-                    height: 50,
-                  ),
-                ),
-                Positioned(
-                  top: 0,
-                  right: 0,
-                  child: Container(
-                    color: Colors.red,
-                    width: 30,
-                    height: 30,
-                  ),
-                ),*/
               ],
             ),
           ),
