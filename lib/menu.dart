@@ -22,6 +22,11 @@ class _MenuState extends State<Menu> {
 
   @override
   Widget build(BuildContext context) {
-    return Material();
+    return ListView.builder(
+      itemCount: foodList.length,
+      itemBuilder: (_, index) {
+        return Text("${foodList[index][1]}");
+      },
+    );
   }
 }
