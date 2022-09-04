@@ -38,24 +38,24 @@ class _MenuState extends State<Menu> {
 
   List<List<dynamic>> foodList = [
     [
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/RedDot_Burger.jpg/1200px-RedDot_Burger.jpg",
-      "Southwest Turkey Burker With Wango-Chili Guacamole",
-      280
+      "https://cdn.pixabay.com/photo/2015/08/26/10/58/the-pork-fried-rice-made-908333_960_720.jpg",
+      "ผัดกระเพราหมูสับ ไข่ดาว",
+      50
     ],
     [
-      "https://media.istockphoto.com/photos/key-lime-pie-picture-id176753451?k=20&m=176753451&s=612x612&w=0&h=UD949OL3t6Ky_OjlWQct9YAl-LnTrF5fN83ZpmoXwHE=",
-      "Key lime pie",
+      "https://cdn.pixabay.com/photo/2015/04/07/07/51/papaya-salad-710613_960_720.jpg",
+      "ส้มตำปูปลาร้า",
+      60
+    ],
+    [
+      "https://cdn.pixabay.com/photo/2014/11/05/15/57/salmon-518032_960_720.jpg",
+      "สเต็กแซลม่อน",
       300
     ],
     [
-      "https://media.istockphoto.com/photos/organic-fried-tater-tots-picture-id454241067?k=20&m=454241067&s=612x612&w=0&h=Camnb1gjh9lfzt_KIbXKyiP4_c4Bo7qhquktCCyi59s=",
-      "Tater tots",
-      230
-    ],
-    [
-      "https://m.media-amazon.com/images/I/81Nb+-kTEpL._SL1240_.jpg",
-      "San Francisco sourdough bread",
-      290
+      "https://cdn.pixabay.com/photo/2016/09/15/19/24/salad-1672505_960_720.jpg",
+      "สลัดผัก ผลไม้",
+      150
     ],
   ];
 
