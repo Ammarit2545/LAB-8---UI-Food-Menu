@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
+// ignore: implementation_imports
+import 'package:flutter/src/foundation/key.dart' show Key;
 import 'package:flutter/src/widgets/framework.dart';
 
 class Menu extends StatefulWidget {
@@ -10,6 +11,31 @@ class Menu extends StatefulWidget {
 }
 
 class _MenuState extends State<Menu> {
+  int _counter = 0;
+
+  void _incrementCounter() {
+    setState(() {
+      // This call to setState tells the Flutter framework that something has
+      // changed in this State, which causes it to rerun the build method below
+      // so that the display can reflect the updated values. If we changed
+      // _counter without calling setState(), then the build method would not be
+      // called again, and so nothing would appear to happen.
+      _counter++;
+    });
+  }
+
+  void _incrementCounter1() {
+    setState(() {
+      if (_counter > 0) {
+        _counter--;
+      } else {
+        _counter = 0;
+      }
+    });
+  }
+
+  List<int> total = const [97, 98, 99, 100];
+
   List<List<dynamic>> foodList = [
     [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/RedDot_Burger.jpg/1200px-RedDot_Burger.jpg",
@@ -42,7 +68,7 @@ class _MenuState extends State<Menu> {
           elevation: 0,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.zero),
           child: Container(
-            height: 100,
+            height: 120,
             width: double.infinity,
             child: Stack(
               children: [
@@ -74,24 +100,43 @@ class _MenuState extends State<Menu> {
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
+                            SizedBox(
+                              height: 0,
+                            ),
+                            FloatingActionButton(
+                              onPressed: _incrementCounter,
+                              backgroundColor: Colors.green,
+                              tooltip: ' + ',
+                              child: const Icon(Icons.add),
+                            ),
                           ],
                         ),
                       ),
                     ),
                   ],
-                  //fit: BoxFit.cover,
+                ),
+                Row(
+                  children: [],
                 ),
                 Container(
                   padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                   alignment: Alignment.bottomRight,
                   child: Chip(
                     backgroundColor: Colors.orangeAccent,
-                    label: Text(
-                      "Order Now",
-                      style: TextStyle(
-                        fontSize: 11,
-                        color: Colors.white,
-                      ),
+                    label: Text('Total of Food : $_counter',
+                        style: Theme.of(context).textTheme.headline4),
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                  alignment: Alignment.bottomCenter,
+                  child: FloatingActionButton(
+                    backgroundColor: Colors.red,
+                    onPressed: _incrementCounter1,
+                    tooltip: ' - ',
+                    child: const Icon(
+                      Icons.delete,
+                      color: Colors.white,
                     ),
                   ),
                 ),
